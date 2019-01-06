@@ -16,7 +16,6 @@ function ChatMessage(props)
         }
         else if(!message[props.name])
         {
-            console.log("Hey")
             return(
                 <div>
                     <div className="chat-name-other">{props.otherName}</div>
@@ -54,7 +53,16 @@ class Chat extends React.Component {
         };
     }
 
-    
+    send(i)
+    {
+        const messages = this.state.messages;
+        const names = this.state.names;
+        this.setState({
+            messages: messages.concat({Left: "New message"}),
+            names: names
+        });
+    }
+
     render() {
         return (
             <div>
@@ -71,10 +79,10 @@ class Chat extends React.Component {
                     />
                 </div>
                 <div className="input-field">
-                    <button className="send-button">Send</button>
+                    <button className="send-button" onClick={() => this.send(0)}>Send</button>
                 </div>
                 <div className="input-field">
-                    <button className="send-button">Send</button>
+                    <button className="send-button" onClick={() => this.send(1)}>Send</button>
                 </div>
             </div>
         );
