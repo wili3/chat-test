@@ -13,6 +13,11 @@ code {
     monospace;
 }
 
+#list ul {
+  overflow: auto;
+  height: 128px;
+}
+
 .chat:after {
   clear: both;
   content: "";
