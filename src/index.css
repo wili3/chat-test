@@ -12,3 +12,82 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.chat:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.chat-window{
+  width: 200px;
+  height: 300px;
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  line-height: 14px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  overflow: auto
+}
+
+.chat-element-user{
+  text-align: right;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.chat-name-user{
+  text-align: right;
+  font-size: 14px;
+  margin-right: 10px;
+  margin-top:10px;
+  height: 24px;
+  font-style: italic;
+  color: blue ;
+}
+
+.chat-element-other{
+  text-align: left;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.chat-name-other{
+  text-align: left;
+  font-size: 14px;
+  margin-left: 10px;
+  margin-top:10px;
+  height: 24px;
+  font-style: italic;
+  color: red ;
+}
+
+.input-field{
+  width: 200px;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  line-height: 14px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+}
+
+.input-field-text{
+  overflow: auto;
+  
+}
+
+.send-button{
+  width: 50px;
+  height: 30px;
+  background: #fff;
+  float: right;
+  line-height: 14px;
+  margin-top: 10px;
+  margin-right: 5px;
+  padding: 0;
+}
