@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
 import {ChatWindow} from './ChatWindow';
+import { SendMessage } from './SendMessage';
 
 export class Chat extends React.Component {
     constructor(props) {
@@ -8,24 +9,19 @@ export class Chat extends React.Component {
         this.state = {
             messages: [],
             names: ["Left", "Right"],
-            left: "",
-            right: "",
+            left: ""
         };
-        this.addValueLeft = this.addValueLeft.bind(this);
-        this.updateInputLeft = this.updateInputLeft.bind(this);
-
-        this.addValueRight = this.addValueRight.bind(this);
-        this.updateInputRight = this.updateInputRight.bind(this);
     }
 
-    send(i)
+    sendMessage(message, index)
     {
         const messages = this.state.messages;
         const names = this.state.names;
-        if(i==0)
+        console.log("Hey");
+        if(index==0)
         {
             this.setState({
-                messages: messages.concat({Left: this.state.left}),
+                messages: messages.concat({Left: message}),
                 names: names,
                 left: ""
             });
@@ -33,51 +29,10 @@ export class Chat extends React.Component {
         else
         {
             this.setState({
-                messages: messages.concat({Right: this.state.right}),
-                names: names,
-                right: ""
+                messages: messages.concat({Right: message}),
+                names: names
             });
         }
-    }
-
-    addValueLeft(evt)
-    {
-      evt.preventDefault();
-      if(this.state.left != "")
-      {
-        this.send(0);
-        evt.target.reset();
-      }
-      return false;
-    }
-
-    updateInputLeft(evt){
-        this.setState({
-            messages: this.state.messages,
-            names: this.state.names,
-            right: this.state.right,
-            left: evt.target.value
-        });   
-    }
-
-    addValueRight(evt)
-    {
-      evt.preventDefault();
-      if(this.state.right != "")
-      {
-        evt.target.reset();
-        this.send(1);
-      }
-      return false;
-    }
-
-    updateInputRight(evt){
-        this.setState({
-            messages: this.state.messages,
-            names: this.state.names,
-            right: evt.target.value,
-            left: this.state.left
-        });   
     }
 
     render() {
@@ -96,16 +51,16 @@ export class Chat extends React.Component {
                     />
                 </div>
                 <div className="input-field">
-                    <form onSubmit={this.addValueLeft}>
-                        <input className="input-field-text" type="text" onChange={this.updateInputLeft} /><br/><br/>
-                        <input className="send-button" type="submit" value="Send"/>
-                    </form>
+                    <SendMessage
+                        index={0}
+                        func={(message,index)=> this.sendMessage(message,index)}
+                    />
                 </div>
                 <div className="input-field">
-                    <form onSubmit={this.addValueRight}>
-                        <input className="input-field-text" type="text" onChange={this.updateInputRight} /><br/><br/>
-                        <input className="send-button" type="submit" value="Send"/>
-                    </form>
+                    <SendMessage
+                        index={1}
+                        func={(message,index)=> this.sendMessage(message,index)}
+                    />
                 </div>
             </div>
         );

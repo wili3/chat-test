@@ -7,13 +7,10 @@ export class ChatWindow extends React.Component{
     render()
     {
         const chatMessages = ChatMessage(this.props);
-
         return (
             <div>
                 <div className="chat-window">
-                    <ul>
                     {chatMessages}
-                    </ul>
                 </div>   
             </div>
         );
