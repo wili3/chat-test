@@ -9,7 +9,7 @@ export class ChatWindow extends React.Component{
         const chatMessages = ChatMessage(this.props);
         return (
             <div>
-                <div className="chat-window">
+                <div className={this.props.className}>
                     {chatMessages}
                 </div>   
             </div>

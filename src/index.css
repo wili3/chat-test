@@ -1,9 +1,6 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -13,82 +10,128 @@ code {
     monospace;
 }
 
-.chat:after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-.chat-window{
+.chat-window-left{
+  border-radius: 15px 0px 0px 0px;
   width: 200px;
   height: 300px;
-  background: #fff;
-  border: 1px solid #999;
+  background:  #e6f2ff;
   float: left;
   line-height: 14px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
-  overflow: auto
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.chat-window-right{
+  border-radius: 0px 15px 0px 0px;
+  width: 200px;
+  height: 300px;
+  background:  #ecf9ec;
+  float: left;
+  line-height: 14px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  direction: rtl;
+}
+
+.chat-row-user{
+  width:100%;
+  float:right;
+}
+
+.chat-box-user{
+  border-radius: 10px;
+  background:  white;
+  float: right;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.chat-row-other{
+  width:100%;
+  float:left;
+}
+
+.chat-box-other{
+  border-radius: 10px;
+  background:  white;
+  float: left;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .chat-element-user{
   text-align: right;
   font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  line-height: 18px;
+  word-break: break-all;
 }
 
 .chat-name-user{
   text-align: right;
   font-size: 14px;
   margin-right: 10px;
+  margin-left: 10px;
   margin-top:10px;
-  height: 24px;
-  font-style: italic;
-  color: blue ;
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 900;
+  color: #009933 ;
 }
 
 .chat-element-other{
   text-align: left;
   font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-right: 10px;
   margin-left: 10px;
+  margin-bottom: 5px;
+  line-height: 18px;
+  word-break: break-all;
 }
 
 .chat-name-other{
   text-align: left;
   font-size: 14px;
+  margin-right: 10px;
   margin-left: 10px;
   margin-top:10px;
-  height: 24px;
-  font-style: italic;
-  color: red ;
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 900;
+  color: #3399ff ;
 }
 
 .input-field{
   width: 200px;
   height: 50px;
   background: #fff;
-  border: 1px solid #999;
   float: left;
   line-height: 14px;
-  margin-right: -1px;
-  margin-top: -1px;
+  margin-right: 0px;
+  margin-top: 0px;
   padding: 0;
 }
 
 .input-field-text{
   overflow: auto;
   float: left;
-  height: 45px
 }
 
 .send-button{
-  width: 50px;
-  height: 25px;
   background: #fff;
-  float: left;
   line-height: 14px;
-  margin-top: -15px;
-  margin-left: 10px;
-  padding: 0;
 }

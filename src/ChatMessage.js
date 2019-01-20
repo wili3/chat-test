@@ -8,23 +8,33 @@ export function ChatMessage(props)
         if(message[props.name])
         {
             return(
-                <ScrollIntoViewIfNeeded>
                 <div>
-                    <div className="chat-name-user">{props.name}</div>
-                    <div className="chat-element-user">{message[props.name]}</div>   
+                <div className="chat-row-user"></div>
+                <div className="chat-box-user">
+                    <ScrollIntoViewIfNeeded>
+                        <div>
+                            <div className="chat-name-user">{props.name}</div>
+                            <div className="chat-element-user">{message[props.name]}</div>   
+                        </div>
+                    </ScrollIntoViewIfNeeded>
                 </div>
-                </ScrollIntoViewIfNeeded>
+                </div>
             );
         }
         else if(!message[props.name])
         {
             return(
-                <ScrollIntoViewIfNeeded>
                 <div>
-                    <div className="chat-name-other">{props.otherName}</div>
-                    <div className="chat-element-other">{message[props.otherName]}</div>    
+                <div className="chat-row-other"></div>
+                <div className="chat-box-other">
+                    <ScrollIntoViewIfNeeded>
+                    <div>
+                        <div className="chat-name-other">{props.otherName}</div>
+                        <div className="chat-element-other">{message[props.otherName]}</div>    
+                    </div>
+                    </ScrollIntoViewIfNeeded>
                 </div>
-                </ScrollIntoViewIfNeeded>
+                </div>
             );
         }
     });

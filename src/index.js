@@ -6,6 +6,8 @@ import {Chat} from './Chat.js'
 // ========================================
 
 ReactDOM.render(
-    <Chat/>,
+	<div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '50vh'}}>
+    	<Chat/>
+	</div>,
     document.getElementById('root')
 );
