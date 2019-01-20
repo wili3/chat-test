@@ -40,11 +40,11 @@ export class SendMessage extends React.Component{
     {
         return (
             <div className="input-field">
-            <form className="form-style" onSubmit={this.addValue}>
-                <input className="input-field-text" type="text" onChange={this.updateInput} />
+            <form className="form-class" onSubmit={this.addValue}>
+                <input className="input-field-text" type="text" placeholder="Write a message" onChange={this.updateInput} />
                 <input className="send-button" type="submit" value="Send"/>
             </form>
-        </div>
+            </div>
         );
     }
 }

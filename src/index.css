@@ -1,3 +1,7 @@
+$input-font-size: 30px;
+$input-line-height: 70px;
+
+
 body {
   margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto";
@@ -70,14 +74,14 @@ code {
 }
 
 .chat-element-user{
-  text-align: right;
+  text-align: left;
   font-size: 14px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-right: 10px;
   margin-left: 10px;
   margin-bottom: 5px;
   line-height: 18px;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .chat-name-user{
@@ -100,7 +104,7 @@ code {
   margin-left: 10px;
   margin-bottom: 5px;
   line-height: 18px;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .chat-name-other{
@@ -115,27 +119,38 @@ code {
   color: #3399ff ;
 }
 
-.form-style{
-  
-}
-
 .input-field{
   width: 200px;
   height: 50px;
-  background: #fff;
   float: left;
-  line-height: 14px;
-  margin-right: 0px;
-  margin-top: 0px;
-  padding: 0;
+  background: #e1e4ea;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .input-field-text{
+  background: #e1e4ea;
+  border: 0px ;
+  outline: none;
+  width:73%;
+  height:42px;
+  font-size: 10px;
   overflow: auto;
   float: left;
+  text-align: left;
+  margin-left: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .send-button{
-  background: #fff;
+  width:22%;
+  float: none;
+  border-radius: 0px 0px 10px 10px;
+  border: 0px ;
+  height: 50px;
+  background: #e1e4ea;
+  outline: none;
+  color: grey;
+  font-weight: 900;
   line-height: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
