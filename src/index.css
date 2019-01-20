@@ -131,13 +131,13 @@ code {
   background: #e1e4ea;
   border: 0px ;
   outline: none;
-  width:73%;
+  width:68%;
   height:42px;
   font-size: 10px;
   overflow: auto;
   float: left;
   text-align: left;
-  margin-left: 5px;
+  margin-left: 15px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
