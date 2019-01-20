@@ -125,12 +125,12 @@ code {
   width: 200px;
   height: 50px;
   float: left;
-  background: #e1e4ea;
+  background: #6d8c8e;
   border-radius: 0px 0px 10px 10px;
 }
 
 .input-field-text{
-  background: #e1e4ea;
+  background: #6d8c8e;
   border: 0px ;
   outline: none;
   width:68%;
@@ -138,6 +138,7 @@ code {
   font-size: 10px;
   overflow: auto;
   float: left;
+  color: white;
   text-align: left;
   margin-left: 15px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -149,10 +150,13 @@ code {
   border-radius: 0px 0px 10px 10px;
   border: 0px ;
   height: 50px;
-  background: #e1e4ea;
+  background: #6d8c8e;
   outline: none;
-  color: grey;
+  color: white;
   font-weight: 900;
   line-height: 14px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.input-field-text::placeholder{
+  color: white;
 }
