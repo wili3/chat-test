@@ -49,18 +49,14 @@ export class Chat extends React.Component {
                         className="chat-window-right"
                     />
                 </div>
-                <div className="input-field">
                     <SendMessage
                         index={0}
                         func={(message,index)=> this.sendMessage(message,index)}
                     />
-                </div>
-                <div className="input-field">
                     <SendMessage
                         index={1}
                         func={(message,index)=> this.sendMessage(message,index)}
                     />
-                </div>
             </div>
         );
     }

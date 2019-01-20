@@ -40,8 +40,8 @@ export class SendMessage extends React.Component{
     {
         return (
             <div className="input-field">
-            <form onSubmit={this.addValue}>
-                <input className="input-field-text" type="text" onChange={this.updateInput} /><br/><br/>
+            <form className="form-style" onSubmit={this.addValue}>
+                <input className="input-field-text" type="text" onChange={this.updateInput} />
                 <input className="send-button" type="submit" value="Send"/>
             </form>
         </div>
