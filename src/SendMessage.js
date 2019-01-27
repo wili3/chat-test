@@ -6,13 +6,16 @@ const Box = posed.div({
   hoverable: true,
   pressable: true,
   init: {
-    scale: 1
+    scale: 1,
+    boxShadow: '0px 2px 5px rgba(0,0,0,0)'
   },
   hover: {
-    scale: 1.1
+    scale: 1.2,
+    boxShadow: '0px 2px 5px rgba(0,0,0,0.1)'
   },
   press: {
     scale: 1.05,
+    boxShadow: '0px 2px 5px rgba(0,0,0,0.1)'
   }
 });
 
