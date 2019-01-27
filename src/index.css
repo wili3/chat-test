@@ -125,12 +125,12 @@ code {
   width: 200px;
   height: 50px;
   float: left;
-  background: #6d8c8e;
+  background: #586f77;
   border-radius: 0px 0px 10px 10px;
 }
 
 .input-field-text{
-  background: #6d8c8e;
+  background: #586f77;
   border: 0px ;
   outline: none;
   width:68%;
@@ -150,7 +150,7 @@ code {
   border-radius: 0px 0px 10px 10px;
   border: 0px ;
   height: 50px;
-  background: #6d8c8e;
+  background: #586f77;
   outline: none;
   color: white;
   font-weight: 900;
