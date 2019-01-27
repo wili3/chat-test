@@ -145,11 +145,12 @@ code {
 }
 
 .send-button{
-  width:22%;
+  width:100%%;
+  height: 100%;
+  border-radius: 10px 10px 10px 10px;
+  float: center;
   float: none;
-  border-radius: 0px 0px 10px 10px;
   border: 0px ;
-  height: 50px;
   background: #586f77;
   outline: none;
   color: white;
@@ -159,4 +160,14 @@ code {
 }
 .input-field-text::placeholder{
   color: white;
+}
+
+.form-class{
+  height: 100%;
+}
+
+.box{
+  float:right;
+  width:22%;
+  height: 100%;
 }

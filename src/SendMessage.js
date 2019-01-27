@@ -1,5 +1,20 @@
 import React from 'react';
 import './index.css';
+import posed from 'react-pose';
+
+const Box = posed.div({
+  hoverable: true,
+  pressable: true,
+  init: {
+    scale: 1
+  },
+  hover: {
+    scale: 1.1
+  },
+  press: {
+    scale: 1.05,
+  }
+});
 
 export class SendMessage extends React.Component{
     constructor(props) {
@@ -42,7 +57,9 @@ export class SendMessage extends React.Component{
             <div className="input-field">
             <form className="form-class" onSubmit={this.addValue}>
                 <input className="input-field-text" type="text" placeholder="Write a message" onChange={this.updateInput} />
-                <input className="send-button" type="submit" value="Send"/>
+                <Box className="box"> 
+                    <input className="send-button" type="submit" value="Send"/>
+                </Box>
             </form>
             </div>
         );
