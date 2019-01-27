@@ -3,6 +3,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Just run:
 
 ### `npm install react-scroll-into-view-if-needed --save`
+### `npm install react-pose --save`
+
 
 ### and then:
 
